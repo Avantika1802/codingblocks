@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main(void) {
+	int n,i,j,a;
+	scanf("%d",&n);
+	
+	int arr[n];
+	for(a=0;a<n;a++){
+		scanf("%d",&arr[a]);
+	}
+	int t;
+	scanf("%d",&t);
+	for(i=0;i<n;i++){
+		for(j=i+1;j<n;j++){
+			if(arr[i]+arr[j]==t){
+				if(arr[i]<arr[j]) printf("%d and %d\n",arr[i],arr[j]);
+				else printf("%d and %d\n",arr[j],arr[i]);
+			}
+		}
+	}
+	return 0;
+}
